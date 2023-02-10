@@ -15,9 +15,9 @@ if __name__ == "__main__":
 	with open(sys.argv[1], "rb") as inp:
 		for b in inp.read():
 			if i == file_size:
-				shellcode+= "\"" + "0x{:02x}".format(b) + "\""
+				shellcode+= "0x{:02x}".format(b) 
 			else:
-				shellcode += "\"" + "0x{:02x}".format(b) + "\","
+				shellcode += "0x{:02x}".format(b) + ","
 			i += 1
 		shellcode += "};"
 	
